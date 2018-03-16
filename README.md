@@ -3,7 +3,7 @@
 
 ## Install
 
-There are many ways to go about achieving this. Some prefer to use `ls` or `mv` however doing so will result in the contents of your current dotfiles being discarded. Useful if you're looking to start fresh with something new, not so much if you're curious or just getting started. 
+There are many ways to go about achieving this. Some prefer to use `cp` or `mv` however doing so will result in the contents of your current dotfiles being discarded. Useful if you're looking to start fresh with something new, not so much if you're curious or just getting started. 
 
 The method outlined below will allow you to use the dotfiles from this repo without discarding the contents of your current dotfiles.
 
