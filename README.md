@@ -1,8 +1,6 @@
 
 # dotfiles
 
-There's no place like 127.0.0.1
-
 ## Install
 
 There are many ways to go about achieving this. Some prefer to use `ls` or `mv` however doing so will result in the contents of your current dotfiles being discarded. Useful if you're looking to start fresh with something new, not so much if you're curious or just getting started. 
