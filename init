@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+// Install homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+// Zsh
+brew install zsh
+chsh -s /usr/local/bin/zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+// Development
+brew cask install iterm2
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install sublime-text
+brew cask install visual-studio-code
+brew cask install transmit
+brew cask install sequel-pro
+
+// Browsers
+brew cask install firefox
+brew cask install google-chrome
+
+// Sync
+brew cask install 1password
+brew cask install alfred
+brew cask install dropbox
+
