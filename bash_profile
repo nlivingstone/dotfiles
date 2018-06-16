@@ -10,6 +10,7 @@ alias canihazip="curl ipinfo.io/ip"
 mkcd () {
   mkdir "$1"
   cd "$1"
+  pwd
 }
 
 # Session Start
