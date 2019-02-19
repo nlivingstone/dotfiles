@@ -92,3 +92,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias cc='clear'
+alias serve='php -S localhost:8000'
+
+function search() {
+	grep -r "$1" *
+}
