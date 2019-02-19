@@ -4,30 +4,14 @@
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Development
-brew install composer
-brew cask install iterm2
-brew cask install virtualbox
-brew cask install vagrant
-brew cask install sublime-text
-brew cask install visual-studio-code
-brew cask install transmit
-brew cask install sequel-pro
-brew cask install tower
-brew cask install viscosity
+brew install composer node
+brew cask install iterm2 virtualbox vagrant sublime-text visual-studio-code transmit sequel-pro tower viscosity
 
 # Browsers
-brew cask install firefox
-brew cask install google-chrome
+brew cask install firefox google-chrome
 
-# Misc
-brew cask install 1password
-brew cask install alfred
-brew cask install dropbox
-brew cask install adobe-creative-cloud
-brew cask install appcleaner
-brew cask install caffeine
-brew cask install spectacle
-brew cask install cacher
+# Productivity
+brew cask install 1password alfred dropbox adobe-creative-cloud appcleaner caffeine spectacle cacher
 brew install youtube-dl
 
 # Zsh
