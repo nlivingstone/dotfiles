@@ -45,6 +45,13 @@ set incsearch
 "--------------Plugins-------------------"
 
 "/
+"/ LightLine (https://github.com/itchyny/lightline.vim)
+"/
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
+
+"/
 "/ CtrlP
 "/
 " Ignore some folders and files for CtrlP indexing
