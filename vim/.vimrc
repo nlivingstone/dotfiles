@@ -1,21 +1,22 @@
-set nocompatible              " be iMproved, required
+set nocompatible                            " be iMproved, required
 
 so ~/.vim/plugins.vim
 
 set backspace=indent,eol,start
-let mapleader = ','						"Set leader key
-set number							"Display line numbers
+let mapleader = ','                         " Set leader key
+set number                                  " Display line numbers
 set encoding=UTF-8
- 
+set clipboard=unnamed                       " Use MacOS clipboard
+set paste
 "--------------Visuals-------------------"
-syntax enable							"Enable syntax highlighting
+syntax enable                               " Enable syntax highlighting
 set t_CO=256
 colorscheme onehalfdark
 set guifont=Operator_Mono_Lig:h13			
-set macligatures						"Use ligatures in MacVim
-highlight comment gui=italic					"Enable italic comments
-set linespace=15						"MacVim Specific
-set showtabline=2						"Always show tab line
+set macligatures                            " Use ligatures in MacVim
+highlight comment gui=italic                " Enable italic comments
+set linespace=13                            " MacVim Specific
+set showtabline=2                           " Always show tab line
 
 highlight LineNR guibg=bg
 hi foldcolumn guibg=bg
