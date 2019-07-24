@@ -82,15 +82,15 @@ autocmd FileType php noremap <Leader>u :call PhpInsertUse()<cr>
 "/ php-cs-fixer
 "/
 " If php-cs-fixer is in $PATH, you don't need to define line below
-let g:php_cs_fixer_path = "~/.composer/vendor/bin/php-cs-fixer" " define the path to the php-cs-fixer.phar
-let g:php_cs_fixer_rules = "@PSR2"          " options: --rules (default:@PSR2)
+let g:php_cs_fixer_path = $HOME."/.composer/vendor/bin/php-cs-fixer" 				" define the path to the php-cs-fixer.phar
+let g:php_cs_fixer_rules = "@PSR2"          									" options: --rules (default:@PSR2)
 autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
 nnoremap <Leader>pf :call PhpCsFixerFixFile()<cr>
 
 "/
 "/ pdv
 "/
-let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+let g:pdv_template_dir = $HOME."/.vim/bundle/pdv/templates_snip"
 nnoremap <Leader>d :call pdv#DocumentWithSnip()<CR>
 
 "/
