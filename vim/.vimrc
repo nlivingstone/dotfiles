@@ -10,7 +10,7 @@ set encoding=UTF-8
 "--------------Visuals-------------------"
 syntax enable							"Enable syntax highlighting
 set t_CO=256
-colorscheme atom-dark
+colorscheme onehalfdark
 set guifont=Operator_Mono_Lig:h13			
 set macligatures						"Use ligatures in MacVim
 highlight comment gui=italic					"Enable italic comments
