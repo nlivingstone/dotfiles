@@ -118,6 +118,12 @@ nmap <C-b> :NERDTreeToggle<cr>
 nmap <C-t> :CtrlPBufTag<cr>
 nmap <C-r> :CtrlPMRUFiles<cr>
 
+"/
+"/ Emmet
+"/
+let g:user_emmet_mode='a'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 "--------------Auto-Commands-------------------"
 augroup autosourcing
