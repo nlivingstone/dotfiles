@@ -48,7 +48,7 @@ set incsearch
 "/ CtrlP
 "/
 " Ignore some folders and files for CtrlP indexing
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|.swp'
 let g:ctrlp_match_window = 'top_order:ttb,min:1,max:5,results:5'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_prompt_mappings = {
