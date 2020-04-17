@@ -95,7 +95,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias cc='clear'
-alias serve='php -S localhost:8000'
+alias serve='php -S 0.0.0.0:1337'
+
+# laravel mix
 alias nrd='npm run watch'
 alias nrp='npm run production'
 
