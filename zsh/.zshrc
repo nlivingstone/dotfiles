@@ -99,6 +99,11 @@ alias serve='php -S localhost:8000'
 alias nrd='npm run watch'
 alias nrp='npm run production'
 
+# phpunit
+alias phpunit="vendor/bin/phpunit"
+alias pu='vendor/bin/phpunit'
+alias puf='vendor/bin/phpunit --filter'
+
 function search() {
 	grep -r "$1" *
 }
