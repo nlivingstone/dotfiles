@@ -97,14 +97,18 @@ source $ZSH/oh-my-zsh.sh
 alias cc='clear'
 alias serve='php -S 0.0.0.0:1337'
 
-# laravel mix
+# laravel
+alias art='php artisan'
 alias nrd='npm run watch'
 alias nrp='npm run production'
+function homestead() {
+    ( cd ~/Projects/Homestead && vagrant $* )
+}
 
 # phpunit
 alias phpunit="vendor/bin/phpunit"
-alias pu='vendor/bin/phpunit'
-alias puf='vendor/bin/phpunit --filter'
+alias phpu='vendor/bin/phpunit'
+alias phpuf='vendor/bin/phpunit --filter'
 
 function search() {
 	grep -r "$1" *
