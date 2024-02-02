@@ -7,12 +7,11 @@
 
 </div>
 
-## Applications
 
-* [Neovim](https://neovim.io/)
-* [Neovide](https://neovide.dev/)
-* [Starship Prompt](https://starship.rs/)
-* [Oh My ZSH!](https://ohmyz.sh/)
+* 🌈 [TokyoNight](https://github.com/folke/tokyonight.nvim) 
+* ✍️  [Neovim](https://neovim.io/) with [Neovide](https://neovide.dev/)
+* 🐚 [Oh My ZSH!](https://ohmyz.sh/) with [Starship Prompt](https://starship.rs/)
+
 
 ## Install
 ```
