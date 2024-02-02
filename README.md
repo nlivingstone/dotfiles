@@ -1,8 +1,6 @@
 <div align="center">
 
-![Branding](https://github.com/nlivingstone/dotfiles/assets/1995501/d48b4e76-163c-4da1-8405-089ba5999c9f)
-
-<img src="https://github.com/nlivingstone/dotfiles/assets/1995501/a294c5cb-f4d0-4c89-bbcf-41541dd3dea5" height="150px">
+<img src="https://github.com/nlivingstone/dotfiles/assets/1995501/a294c5cb-f4d0-4c89-bbcf-41541dd3dea5" height="150px" alt="Neil Livingstone's MacOS Dotfiles">
 
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/nlivingstone/dotfiles/master?style=for-the-badge&logo=github)
 ![GitHub repo size](https://img.shields.io/github/repo-size/nlivingstone/dotfiles?style=for-the-badge)
