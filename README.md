@@ -1,4 +1,4 @@
-![Dotfiles](./images/heading.svg)
+![Dotfiles](https://github.com/nlivingstone/dotfiles/assets/1995501/917b25c5-f57b-44d9-8dfc-27dcf87cd78c)
 
 <div align="center">
 
