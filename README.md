@@ -1,4 +1,5 @@
 <div align="center">
+
 ![Branding](https://github.com/nlivingstone/dotfiles/assets/1995501/b482eb12-8d77-4fae-8a15-2d1644de0633)
 
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/nlivingstone/dotfiles/master?style=for-the-badge&logo=github)
