@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>【 MacOS Dotfiles 】</h1>
+    <h1>MacOS Dotfiles</h1>
 </div>
 
 <div align="center">
