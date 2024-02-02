@@ -1,8 +1,13 @@
+<div align="center">
+    <h1>【 MacOS Dotfiles 】</h1>
+</div>
 
-# dotfiles
+<div align="center">
 
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/nlivingstone/dotfiles/master?style=for-the-badge&logo=github)
 ![GitHub repo size](https://img.shields.io/github/repo-size/nlivingstone/dotfiles?style=for-the-badge)
+
+</div>
 
 ## Applications
 
