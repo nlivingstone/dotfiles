@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/nlivingstone/dotfiles/assets/1995501/d48b4e76-163c-4da1-8405-089ba5999c9f" style="max-width: 300px">
+![Branding](https://github.com/nlivingstone/dotfiles/assets/1995501/d48b4e76-163c-4da1-8405-089ba5999c9f)
 
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/nlivingstone/dotfiles/master?style=for-the-badge&logo=github)
 ![GitHub repo size](https://img.shields.io/github/repo-size/nlivingstone/dotfiles?style=for-the-badge)
