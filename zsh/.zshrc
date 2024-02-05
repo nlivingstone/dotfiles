@@ -119,5 +119,5 @@ alias nrd='npm run dev'
 alias nrb='npm run build'
 
 # PhpUnit Helpers
-alias pu="vendor/bin/phpunit"
-alias puf='vendor/bin/phpunit --filter'
+alias pu="./vendor/bin/phpunit"
+alias puf='./vendor/bin/phpunit --filter'
