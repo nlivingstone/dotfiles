@@ -632,6 +632,13 @@ vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('v', 'c', '"_c', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'c', '"_c', { noremap = true, silent = true })
 
+-- Indentation
+vim.keymap.set("i", '<D-]>', '<ESC>>>i', { noremap = true, silent = true, desc = "Indent Right" }) -- Indent Right insert mode
+vim.keymap.set("i", '<D-[>', '<ESC><<i', { noremap = true, silent = true, desc = "Indent Left" })  -- Indent Left insert mode
+vim.keymap.set("n", '<D-]>', '>>', { noremap = true, silent = true, desc = "Indent Right" })       -- Indent Right normal mode
+vim.keymap.set("n", '<D-[>', '<<', { noremap = true, silent = true, desc = "Indent Left" })        -- Indent Right normal mode
+vim.keymap.set("v", '<D-]>', '>gv', { noremap = true, silent = true, desc = "Indent Right" })      -- Indent Right visual mode
+vim.keymap.set("v", '<D-[>', '<gv', { noremap = true, silent = true, desc = "Outdent Left" })      -- Indent Left visual mode
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
