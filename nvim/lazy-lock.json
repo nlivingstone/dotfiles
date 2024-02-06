@@ -19,6 +19,7 @@
   "neorg": { "branch": "main", "commit": "98f390d8b0c42e40196ea4d831b42b3908137bc3" },
   "night-owl.nvim": { "branch": "main", "commit": "5106bb2d420bb4c6867cd577f9413de039052275" },
   "nvim-cmp": { "branch": "main", "commit": "0b751f6beef40fd47375eaf53d3057e0bfa317e4" },
+  "nvim-emmet": { "branch": "main", "commit": "928cfb74ed436d6d326ccab2061cf3592de1bf55" },
   "nvim-lspconfig": { "branch": "master", "commit": "37457f268af5cd6765e589b0dcd7cbd192d8da00" },
   "nvim-treesitter": { "branch": "master", "commit": "96f55f304332ca6ea1b7dde32d3ec04b5298c316" },
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "e69a504baf2951d52e1f1fbb05145d43f236cbf1" },
