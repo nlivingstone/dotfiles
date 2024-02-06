@@ -636,10 +636,8 @@ end
 vim.keymap.set('n', '<D-Right>', ':bnext<CR>') -- CMD + Right: Go to next buffer
 vim.keymap.set('n', '<D-Left>', ':bprev<CR>')  -- CMD + Left: Go to previous buffer
 
-
--- Prevent (c)hange from overwriting clipboard
-vim.api.nvim_set_keymap('v', 'c', '"_c', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'c', '"_c', { noremap = true, silent = true })
+-- Quality of life
+vim.keymap.set({ 'v', 'n' }, 'c', '"_c', { noremap = true, silent = true }) -- Prevent [c]hange commands from overwriting system clipboard
 
 -- Indentation
 vim.keymap.set("i", '<D-]>', '<ESC>>>i', { noremap = true, silent = true, desc = "Indent Right" }) -- Indent Right insert mode
