@@ -599,14 +599,17 @@ if vim.g.neovide then
   vim.g.neovide_cursor_animate_command_line = true
 
   -- Neovide Specific Keybindings
-  vim.keymap.set("n", "<D-w>", ":bd<CR>")     -- Ctrl+W: Quit current tab
-  vim.keymap.set('n', '<D-s>', ':w<CR>')      -- Save insert mode
-  vim.keymap.set('i', '<D-s>', '<ESC>:w<CR>') -- Save insert mode
-  vim.keymap.set('v', '<D-c>', '"+y')         -- Copy
-  vim.keymap.set('n', '<D-v>', '"+P')         -- Paste normal mode
-  vim.keymap.set('v', '<D-v>', '"+P')         -- Paste visual mode
-  vim.keymap.set('c', '<D-v>', '<C-R>+')      -- Paste command mode
-  vim.keymap.set('i', '<D-v>', '<ESC>"+P')    -- Paste insert mode
+  vim.keymap.set("n", "<D-w>", "<C-o>:bd<CR>")    -- CMD + W: Quit current tab
+  vim.keymap.set({ "n", "v" }, '<D-s>', ':w<CR>') -- CMD + S: Save normal + visual mode
+  vim.keymap.set('i', '<D-s>', '<C-o>:w<CR>')     -- CMD + S: Save insert mode
+  vim.keymap.set('v', '<D-c>', '"+y')             -- CMD + C: Copy in visual mode
+  vim.keymap.set('v', '<D-x>', 'x')               -- CMD + X: Cut in visual mode
+  vim.keymap.set("n", '<D-x>', 'dd')              -- CMD + X: Cut in normal mode
+  vim.keymap.set("i", '<D-x>', '<C-o>dd')         -- CMD + X: Cut insert mode
+  vim.keymap.set({ "n", "v" }, '<D-v>', '"+P')    -- CMD + V: Paste normal + visual mode
+  vim.keymap.set('!', '<D-v>', '<C-r><C-r>+')     -- CMD + V: Paste command mode
+  vim.keymap.set('i', '<D-v>', '<C-o>"+P')        -- CMD + V: Paste insert mode
+
 
   -- vim.keymap.set('v', '<D-f>', '"+y/+<CR>') -- Ctrl+F Find
   vim.keymap.set({ 'i', 'n' }, '<S-Left>', 'v<Left>')   -- Shift+Left Select in the corresponding direction.
