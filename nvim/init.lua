@@ -620,9 +620,6 @@ if vim.g.neovide then
   vim.keymap.set('v', '<S-Right>', '<Right>')           -- Shift+Right Select in the corresponding direction.
   vim.keymap.set('v', '<S-Up>', '<Up>')                 -- Shift+Up Select in the corresponding direction.
   vim.keymap.set('v', '<S-Down>', '<Down>')             -- Shift+Down Select in the corresponding direction.
-
-  vim.keymap.set('n', '<D-Right>', ':bnext<CR>')        -- Ctrl+Right: Go to next buffer
-  vim.keymap.set('n', '<D-Left>', ':bprev<CR>')         -- Ctrl+S: Go to previous buffer
 end
 
 -- Allow clipboard copy paste in neovim
@@ -631,6 +628,11 @@ end
 -- vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('!', '<D-v>', '<C-R><C-O>+', { noremap = true, silent = true })
+
+-- Navigate buffers
+vim.keymap.set('n', '<D-Right>', ':bnext<CR>') -- CMD + Right: Go to next buffer
+vim.keymap.set('n', '<D-Left>', ':bprev<CR>')  -- CMD + Left: Go to previous buffer
+
 
 -- Prevent (c)hange from overwriting clipboard
 vim.api.nvim_set_keymap('v', 'c', '"_c', { noremap = true, silent = true })
