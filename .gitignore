@@ -1,3 +1,4 @@
 .DS_Store
 *.swp
 nvim/.php-cs-fixer.cache
+.php-cs-fixer.cache
