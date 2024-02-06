@@ -4,10 +4,6 @@ return {
     config = function()
         require('toggleterm').setup({
             open_mapping = '<leader>tt',
-            on_open = function(term)
-                vim.cmd("startinsert!")
-                vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", { noremap = true, silent = true })
-            end,
             insert_mappings = true,
             terminal_mappings = true,
             close_on_exit = true,
