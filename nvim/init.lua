@@ -155,11 +155,20 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
     opts = {
-      char = '|',
       show_trailing_blankline_indent = false,
     },
     config = function()
-      require("ibl").setup()
+      require("ibl").setup({
+        indent = { highlight = highlight, char = "" },
+        whitespace = {
+            highlight = {
+              "CursorColumn",
+              "Whitespace",
+          },
+            remove_blankline_trail = false,
+        },
+        scope = { enabled = false },
+    })
     end
   },
 
