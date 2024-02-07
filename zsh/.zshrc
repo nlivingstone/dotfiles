@@ -2,8 +2,10 @@
 # ░█░█░█▀█░▄▄▄░█░█░░█░░▄▄▄░▄▀░░▀▀█░█▀█░
 # ░▀▀▀░▀░▀░░░░░▀░▀░░▀░░░░░░▀▀▀░▀▀▀░▀░▀░
 
-# If you come from bash you might have to change your $PATH.
-export PATH="/Users/neil/.composer/vendor/bin:$PATH"
+# ░█▀█░█▀█░▀█▀░█░█░
+# ░█▀▀░█▀█░░█░░█▀█░
+# ░▀░░░▀░▀░░▀░░▀░▀░
+export PATH="/Users/$USER/.composer/vendor/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -74,25 +76,47 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+# ░█▀█░█░░░█░█░█▀▀░▀█▀░█▀█░█▀▀░
+# ░█▀▀░█░░░█░█░█░█░░█░░█░█░▀▀█░
+# ░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░
 plugins=(aliases brew git composer laravel macos)
 
+# ░█▀▀░█▀█░█░█░█▀▄░█▀▀░█▀▀░     
+# ░▀▀█░█░█░█░█░█▀▄░█░░░█▀▀░            
+# ░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░            
+# ░█▀█░█░█░░░░░█▄█░█░█░░░░░▀▀█░█▀▀░█░█░
+# ░█░█░█▀█░▄▄▄░█░█░░█░░▄▄▄░▄▀░░▀▀█░█▀█░
+# ░▀▀▀░▀░▀░░░░░▀░▀░░▀░░░░░░▀▀▀░▀▀▀░▀░▀░
 source $ZSH/oh-my-zsh.sh
 
-# Starship Prompt
+# ░█▀▀░▀█▀░█▀█░█▀▄░█▀▀░█░█░▀█▀░█▀█░
+# ░▀▀█░░█░░█▀█░█▀▄░▀▀█░█▀█░░█░░█▀▀░ 
+# ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░░
+# ░█▀█░█▀▄░█▀█░█▄█░█▀█░▀█▀░░░░░░░░░
+# ░█▀▀░█▀▄░█░█░█░█░█▀▀░░█░░░░░░░░░░
+# ░▀░░░▀░▀░▀▀▀░▀░▀░▀░░░░▀░░░░░░░░░░
 eval "$(starship init zsh)"
 
-# User configuration
+# ░█░█░█▀▀░█▀▀░█▀▄░░░█▀▀░█▀█░█▀█░█▀▀░▀█▀░█▀▀░
+# ░█░█░▀▀█░█▀▀░█▀▄░░░█░░░█░█░█░█░█▀▀░░█░░█░█░
+# ░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░▀▀▀░▀▀▀░▀░▀░▀░░░▀▀▀░▀▀▀░
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+# ░█▀█░█▀█░█▀▄░█▀▀░░░█░█░█▀▀░█▀▄░█▀▀░▀█▀░█▀█░█▀█░░░█▄█░█▀▀░█▀▄░
+# ░█░█░█░█░█░█░█▀▀░░░▀▄▀░█▀▀░█▀▄░▀▀█░░█░░█░█░█░█░░░█░█░█░█░█▀▄░
+# ░▀░▀░▀▀▀░▀▀░░▀▀▀░░░░▀░░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░▀░▀░▀▀▀░▀░▀░
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# Preferred editor for local and remote sessions
+# ░█▀▀░█▀▄░▀█▀░▀█▀░█▀█░█▀▄░
+# ░█▀▀░█░█░░█░░░█░░█░█░█▀▄░
+# ░▀▀▀░▀▀░░▀▀▀░░▀░░▀▀▀░▀░▀░
 if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
 else
@@ -107,21 +131,33 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# Misc aliases
+# ░█▀█░█░░░▀█▀░█▀█░█▀▀░█▀▀░█▀▀░
+# ░█▀█░█░░░░█░░█▀█░▀▀█░█▀▀░▀▀█░
+# ░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀▀▀░
+
+# ░█▄█░▀█▀░█▀▀░█▀▀░
+# ░█░█░░█░░▀▀█░█░░░
+# ░▀░▀░▀▀▀░▀▀▀░▀▀▀░
 alias cc='clear'
 alias canihazip="curl ipinfo.io/ip"
 
-# ZSH aliases
+# ░▀▀█░█▀▀░█░█░
+# ░▄▀░░▀▀█░█▀█░
+# ░▀▀▀░▀▀▀░▀░▀░
 alias editzsh="nvim ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias ls="exa --icons --across --classify"
 
-# Laravel Aliases
+# ░█░░░█▀█░█▀▄░█▀█░█░█░█▀▀░█░░░
+# ░█░░░█▀█░█▀▄░█▀█░▀▄▀░█▀▀░█░░░
+# ░▀▀▀░▀░▀░▀░▀░▀░▀░░▀░░▀▀▀░▀▀▀░
 alias art='php artisan'
 alias nrd='npm run dev'
 alias nrb='npm run build'
 
-# PhpUnit Helpers
+# ░█▀█░█░█░█▀█░█░█░█▀█░▀█▀░▀█▀░
+# ░█▀▀░█▀█░█▀▀░█░█░█░█░░█░░░█░░
+# ░▀░░░▀░▀░▀░░░▀▀▀░▀░▀░▀▀▀░░▀░░
 alias pu="./vendor/bin/phpunit"
 alias puf='./vendor/bin/phpunit --filter'
