@@ -1,40 +1,10 @@
---[[
-
-=====================================================================
-==================== READ THIS BEFORE CONTINUING ====================
-=====================================================================
-
-Kickstart.nvim is *not* a distribution.
-
-Kickstart.nvim is a template for your own configuration.
-  The goal is that you can read every line of code, top-to-bottom, understand
-  what your configuration is doing, and modify it to suit your needs.
-
-  Once you've done that, you should start exploring, configuring and tinkering to
-  explore Neovim!
-
-  If you don't know anything about Lua, I recommend taking some time to read through
-  a guide. One possible example:
-  - https://learnxinyminutes.com/docs/lua/
-
-  And then you can explore or search through `:help lua-guide`
+-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░
+-- ░░█▀█░█▀▀░█▀█░█░█░▀█▀░█▄█░░
+-- ░░█░█░█▀▀░█░█░▀▄▀░░█░░█░█░░
+-- ░░▀░▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀░▀░░
+-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 
-Kickstart Guide:
-
-I have left several `:help X` comments throughout the init.lua
-You should run that command and read that help section for more information.
-
-In addition, I have some `NOTE:` items throughout the file.
-These are for you, the reader to help understand what is happening. Feel free to delete
-them once you know what you're doing, but they should serve as a guide for when you
-are first encountering a few different constructs in your nvim config.
-
-I hope you enjoy your Neovim journey,
-- TJ
-
-P.S. You can delete this when you're done too. It's your config now :)
---]]
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -61,8 +31,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- NOTE: Here is where you install your plugins.
---  You can configure plugins using the `config` key.
+-- ░█▀█░█░░░█░█░█▀▀░▀█▀░█▀█░█▀▀░░
+-- ░█▀▀░█░░░█░█░█░█░░█░░█░█░▀▀█░░
+-- ░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░░
+-- NOTE: You can configure plugins using the `config` key.
 --
 --  You can also configure plugins after the setup call,
 --    as they will be available in your neovim runtime.
@@ -112,7 +84,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim',  opts = {} },
+  { 'folke/which-key.nvim', opts = {} },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -161,20 +133,42 @@ require('lazy').setup({
       require("ibl").setup({
         indent = { highlight = highlight, char = "" },
         whitespace = {
-            highlight = {
-              "CursorColumn",
-              "Whitespace",
+          highlight = {
+            "CursorColumn",
+            "Whitespace",
           },
-            remove_blankline_trail = false,
+          remove_blankline_trail = false,
         },
         scope = { enabled = false },
-    })
+      })
     end
   },
 
-  -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  -- ░█▀▀░█▀█░█▄█░█▄█░█▀▀░█▀█░▀█▀░░░░█▀█░█░█░▀█▀░█▄█░░
+  -- ░█░░░█░█░█░█░█░█░█▀▀░█░█░░█░░░░░█░█░▀▄▀░░█░░█░█░░
+  -- ░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀▀░▀░▀░░▀░░▀░░▀░▀░░▀░░▀▀▀░▀░▀░░
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+      toggler = {
+        ---Line-comment toggle keymap
+        line = 'gcc',
+        ---Block-comment toggle keymap
+        block = 'gbc',
+      },
+      ---LHS of operator-pending mappings in NORMAL and VISUAL mode
+      opleader = {
+        ---Line-comment keymap
+        line = 'gc',
+        ---Block-comment keymap
+        block = 'gb',
+      },
+    },
+  },
 
+  -- ░█▀▀░▀█▀░█▀█░█▀▄░█▀▀░█▀▄░
+  -- ░█▀▀░░█░░█░█░█░█░█▀▀░█▀▄░
+  -- ░▀░░░▀▀▀░▀░▀░▀▀░░▀▀▀░▀░▀░
   -- Fuzzy Finder (files, lsp, etc)
   {
     'nvim-telescope/telescope.nvim',
@@ -195,7 +189,9 @@ require('lazy').setup({
       },
     },
   },
-
+  -- ░▀█▀░█▀▄░█▀▀░█▀▀░█▀▀░▀█▀░▀█▀░▀█▀░█▀▀░█▀▄░
+  -- ░░█░░█▀▄░█▀▀░█▀▀░▀▀█░░█░░░█░░░█░░█▀▀░█▀▄░
+  -- ░░▀░░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░▀░░░▀░░▀▀▀░▀░▀░
   {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
@@ -220,6 +216,9 @@ require('lazy').setup({
   { import = 'plugins' },
 }, {})
 
+-- ░█▀▀░█▀▀░▀█▀░▀█▀░▀█▀░█▀█░█▀▀░░░█▀█░█▀█░▀█▀░▀█▀░█▀█░█▀█░█▀▀░
+-- ░▀▀█░█▀▀░░█░░░█░░░█░░█░█░█░█░░░█░█░█▀▀░░█░░░█░░█░█░█░█░▀▀█░
+-- ░▀▀▀░▀▀▀░░▀░░░▀░░▀▀▀░▀░▀░▀▀▀░░░▀▀▀░▀░░░░▀░░▀▀▀░▀▀▀░▀░▀░▀▀▀░
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
@@ -240,8 +239,8 @@ vim.o.linespace = 0
 vim.o.mouse = 'a'
 
 -- Sync clipboard between OS and Neovim.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
+-- Remove this option if you want your OS clipboard to remain independent.
+-- See `:help 'clipboard'`
 vim.o.clipboard = 'unnamedplus'
 
 -- Enable break indent
@@ -267,6 +266,9 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+-- ░█▀▄░█▀█░█▀▀░▀█▀░█▀▀░░░█░█░█▀▀░█░█░█▄█░█▀█░█▀█░█▀▀░░
+-- ░█▀▄░█▀█░▀▀█░░█░░█░░░░░█▀▄░█▀▀░░█░░█░█░█▀█░█▀▀░▀▀█░░
+-- ░▀▀░░▀░▀░▀▀▀░▀▀▀░▀▀▀░░░▀░▀░▀▀▀░░▀░░▀░▀░▀░▀░▀░░░▀▀▀░░
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
@@ -276,9 +278,6 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-
---
-vim.keymap.set('n', '<D-s>', ':w<cr>', { desc = '[S]earch [F]iles' })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -291,7 +290,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
--- [[ Configure Telescope ]]
+-- ░█▀▀░█▀█░█▀█░█▀▀░▀█▀░█▀▀░░░▀█▀░█▀▀░█░░░█▀▀░█▀▀░█▀▀░█▀█░█▀█░█▀▀░░
+-- ░█░░░█░█░█░█░█▀▀░░█░░█░█░░░░█░░█▀▀░█░░░█▀▀░▀▀█░█░░░█░█░█▀▀░█▀▀░░
+-- ░▀▀▀░▀▀▀░▀░▀░▀░░░▀▀▀░▀▀▀░░░░▀░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░░░▀▀▀░░
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
   defaults = {
@@ -321,6 +322,12 @@ require('telescope').setup {
     }
   }
 }
+-- ░▀█▀░█▀▀░█░░░█▀▀░█▀▀░█▀▀░█▀█░█▀█░█▀▀░░
+-- ░░█░░█▀▀░█░░░█▀▀░▀▀█░█░░░█░█░█▀▀░█▀▀░░
+-- ░░▀░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░░░▀▀▀░░
+-- ░█▀▀░█░█░▀█▀░█▀▀░█▀█░█▀▀░▀█▀░█▀█░█▀█░█▀▀░░
+-- ░█▀▀░▄▀▄░░█░░█▀▀░█░█░▀▀█░░█░░█░█░█░█░▀▀█░░
+-- ░▀▀▀░▀░▀░░▀░░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░░
 -- Enable auto-session, if installed
 pcall(require('telescope').load_extension, "session-lens")
 -- Enable telescope-file-browser, if installed
@@ -348,6 +355,9 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set("n", "<leader>ss", require("auto-session.session-lens").search_session, { noremap = true, })
 
+-- ░█▀▀░█▀█░█▀█░█▀▀░▀█▀░█▀▀░░░▀█▀░█▀▄░█▀▀░█▀▀░█▀▀░▀█▀░▀█▀░▀█▀░█▀▀░█▀▄░
+-- ░█░░░█░█░█░█░█▀▀░░█░░█░█░░░░█░░█▀▄░█▀▀░█▀▀░▀▀█░░█░░░█░░░█░░█▀▀░█▀▄░
+-- ░▀▀▀░▀▀▀░▀░▀░▀░░░▀▀▀░▀▀▀░░░░▀░░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░▀░░░▀░░▀▀▀░▀░▀░
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
@@ -422,6 +432,9 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
+-- ░█▀▀░█▀█░█▀█░█▀▀░▀█▀░█▀▀░░░█░░░█▀▀░█▀█░░
+-- ░█░░░█░█░█░█░█▀▀░░█░░█░█░░░█░░░▀▀█░█▀▀░░
+-- ░▀▀▀░▀▀▀░▀░▀░▀░░░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░▀░░░░
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
@@ -526,6 +539,9 @@ mason_lspconfig.setup_handlers {
   end
 }
 
+-- ░█▀█░█░█░▀█▀░█▄█░░░░░█▀▀░█▄█░█▀█░░
+-- ░█░█░▀▄▀░░█░░█░█░▄▄▄░█░░░█░█░█▀▀░░
+-- ░▀░▀░░▀░░▀▀▀░▀░▀░░░░░▀▀▀░▀░▀░▀░░░░
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
 local cmp = require 'cmp'
@@ -575,30 +591,45 @@ cmp.setup {
 }
 
 
-
+-- ░█▀█░█▀▀░█▀█░█░█░▀█▀░█▀▄░█▀▀░░░█▀▀░█▀█░█▀█░█▀▀░▀█▀░█▀▀░░
+-- ░█░█░█▀▀░█░█░▀▄▀░░█░░█░█░█▀▀░░░█░░░█░█░█░█░█▀▀░░█░░█░█░░
+-- ░▀░▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀▀░░▀▀▀░░░▀▀▀░▀▀▀░▀░▀░▀░░░▀▀▀░▀▀▀░░
 
 if vim.g.neovide then
-  -- MacOS Only: Blur & Transparancy
+  -- ░█▄█░█▀█░█▀▀░█▀█░█▀▀░░░█▀█░█▀█░█░░░█░█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+  -- ░█░█░█▀█░█░░░█░█░▀▀█░░░█░█░█░█░█░░░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+  -- ░▀░▀░▀░▀░▀▀▀░▀▀▀░▀▀▀░░░▀▀▀░▀░▀░▀▀▀░░▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+  -- ░█▀▄░█░░░█░█░█▀▄░░░▀█▀░█▀▄░█▀█░█▀█░█▀▀░█▀█░█▀█░█▀▄░█▀█░█▀█░█▀▀░█░█░
+  -- ░█▀▄░█░░░█░█░█▀▄░░░░█░░█▀▄░█▀█░█░█░▀▀█░█▀▀░█▀█░█▀▄░█▀█░█░█░█░░░░█░░
+  -- ░▀▀░░▀▀▀░▀▀▀░▀░▀░░░░▀░░▀░▀░▀░▀░▀░▀░▀▀▀░▀░░░▀░▀░▀░▀░▀░▀░▀░▀░▀▀▀░░▀░░
   vim.g.neovide_transparency = 0.90
   vim.g.neovide_window_blurred = true
 
-  -- Floating Window Blur
+  -- ░█▀▀░█░░░█▀█░█▀█░▀█▀░▀█▀░█▀█░█▀▀░░░█▀▄░█░░░█░█░█▀▄░░
+  -- ░█▀▀░█░░░█░█░█▀█░░█░░░█░░█░█░█░█░░░█▀▄░█░░░█░█░█▀▄░░
+  -- ░▀░░░▀▀▀░▀▀▀░▀░▀░░▀░░▀▀▀░▀░▀░▀▀▀░░░▀▀░░▀▀▀░▀▀▀░▀░▀░░
   vim.g.neovide_floating_blur_amount_x = 10.0
   vim.g.neovide_floating_blur_amount_y = 10.0
 
-  -- Floating Window Shadow
+  -- ░█▀▀░█░░░█▀█░█▀█░▀█▀░▀█▀░█▀█░█▀▀░░░█▀▀░█░█░█▀█░█▀▄░█▀█░█░█░░
+  -- ░█▀▀░█░░░█░█░█▀█░░█░░░█░░█░█░█░█░░░▀▀█░█▀█░█▀█░█░█░█░█░█▄█░░
+  -- ░▀░░░▀▀▀░▀▀▀░▀░▀░░▀░░▀▀▀░▀░▀░▀▀▀░░░▀▀▀░▀░▀░▀░▀░▀▀░░▀▀▀░▀░▀░░
   vim.g.neovide_floating_shadow = false
   vim.g.neovide_floating_z_height = 10
   vim.g.neovide_light_angle_degrees = 45
   vim.g.neovide_light_radius = 20
 
-  -- Padding
+  -- ░█▀█░█▀█░█▀▄░█▀▄░▀█▀░█▀█░█▀▀░░
+  -- ░█▀▀░█▀█░█░█░█░█░░█░░█░█░█░█░░
+  -- ░▀░░░▀░▀░▀▀░░▀▀░░▀▀▀░▀░▀░▀▀▀░░
   vim.g.neovide_padding_top = 5
   vim.g.neovide_padding_bottom = 5
   vim.g.neovide_padding_right = 5
   vim.g.neovide_padding_left = 5
 
-  -- Cursor Animation
+  -- ░█▀▀░█░█░█▀▄░█▀▀░█▀█░█▀▄░░░█▀█░█▀█░▀█▀░█▄█░█▀█░▀█▀░▀█▀░█▀█░█▀█░░
+  -- ░█░░░█░█░█▀▄░▀▀█░█░█░█▀▄░░░█▀█░█░█░░█░░█░█░█▀█░░█░░░█░░█░█░█░█░░
+  -- ░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀░▀░░░▀░▀░▀░▀░▀▀▀░▀░▀░▀░▀░░▀░░▀▀▀░▀▀▀░▀░▀░░
   vim.g.neovide_cursor_vfx_mode = "railgun"
   vim.g.neovide_cursor_vfx_opacity = 300.0
   vim.g.neovide_cursor_vfx_particle_density = 10.0
@@ -610,8 +641,11 @@ if vim.g.neovide then
   vim.g.neovide_cursor_animate_in_insert_mode = true
   vim.g.neovide_cursor_animate_command_line = true
 
-  -- Neovide Specific Keybindings
-  vim.keymap.set("n", "<D-w>", "<C-o>:bd<CR>")    -- CMD + W: Quit current tab
+  -- ░█▀█░█▀▀░█▀█░█░█░▀█▀░█▀▄░█▀▀░░░█░█░█▀▀░█░█░█▀▄░▀█▀░█▀█░█▀▄░▀█▀░█▀█░█▀▀░█▀▀
+  -- ░█░█░█▀▀░█░█░▀▄▀░░█░░█░█░█▀▀░░░█▀▄░█▀▀░░█░░█▀▄░░█░░█░█░█░█░░█░░█░█░█░█░▀▀█
+  -- ░▀░▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀▀░░▀▀▀░░░▀░▀░▀▀▀░░▀░░▀▀░░▀▀▀░▀░▀░▀▀░░▀▀▀░▀░▀░▀▀▀░▀▀▀
+  vim.keymap.set("n", "<D-w>", ":bd<CR>")         -- CMD + W: Quit current tab normal mode
+  vim.keymap.set("i", "<D-w>", "<C-o>:bd<CR>")    -- CMD + W: Quit current tab insert mode
   vim.keymap.set({ "n", "v" }, '<D-s>', ':w<CR>') -- CMD + S: Save normal + visual mode
   vim.keymap.set('i', '<D-s>', '<C-o>:w<CR>')     -- CMD + S: Save insert mode
   vim.keymap.set('v', '<D-c>', '"+y')             -- CMD + C: Copy in visual mode
@@ -622,8 +656,9 @@ if vim.g.neovide then
   vim.keymap.set('!', '<D-v>', '<C-r><C-r>+')     -- CMD + V: Paste command mode
   vim.keymap.set('i', '<D-v>', '<C-o>"+P')        -- CMD + V: Paste insert mode
 
-
-  -- vim.keymap.set('v', '<D-f>', '"+y/+<CR>') -- Ctrl+F Find
+  -- ░█▀▀░█▀▀░█░░░█▀▀░█▀▀░▀█▀░▀█▀░█▀█░█▀█░░
+  -- ░▀▀█░█▀▀░█░░░█▀▀░█░░░░█░░░█░░█░█░█░█░░
+  -- ░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀▀▀░▀░▀░░
   vim.keymap.set({ 'i', 'n' }, '<S-Left>', 'v<Left>')   -- Shift+Left Select in the corresponding direction.
   vim.keymap.set({ 'i', 'n' }, '<S-Right>', 'v<Right>') -- Shift+Right Select in the corresponding direction.
   vim.keymap.set({ 'i', 'n' }, '<S-Up>', 'v<Up>')       -- Shift+Up Select in the corresponding direction.
@@ -641,14 +676,22 @@ end
 -- vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('!', '<D-v>', '<C-R><C-O>+', { noremap = true, silent = true })
 
--- Navigate buffers
+-- ░█▀█░█▀█░█░█░▀█▀░█▀▀░█▀█░▀█▀░█▀▀░░░█▀▄░█░█░█▀▀░█▀▀░█▀▀░█▀▄░█▀▀░░
+-- ░█░█░█▀█░▀▄▀░░█░░█░█░█▀█░░█░░█▀▀░░░█▀▄░█░█░█▀▀░█▀▀░█▀▀░█▀▄░▀▀█░░
+-- ░▀░▀░▀░▀░░▀░░▀▀▀░▀▀▀░▀░▀░░▀░░▀▀▀░░░▀▀░░▀▀▀░▀░░░▀░░░▀▀▀░▀░▀░▀▀▀░░
 vim.keymap.set('n', '<D-Right>', ':bnext<CR>') -- CMD + Right: Go to next buffer
 vim.keymap.set('n', '<D-Left>', ':bprev<CR>')  -- CMD + Left: Go to previous buffer
 
--- Quality of life
-vim.keymap.set({ 'v', 'n' }, 'c', '"_c', { noremap = true, silent = true }) -- Prevent [c]hange commands from overwriting system clipboard
+-- ░█▀▀░█░░░▀█▀░█▀█░█▀▄░█▀█░█▀█░█▀▄░█▀▄░░
+-- ░█░░░█░░░░█░░█▀▀░█▀▄░█░█░█▀█░█▀▄░█░█░░
+-- ░▀▀▀░▀▀▀░▀▀▀░▀░░░▀▀░░▀▀▀░▀░▀░▀░▀░▀▀░░░
+-- Prevent copy, cut and delete motions from overwriting system clipboard
+vim.keymap.set({ 'v', 'n' }, 'c', '"_c', { noremap = true, silent = true })
+vim.keymap.set({ 'v', 'n' }, 'd', '"_d', { noremap = true, silent = true })
 
--- Indentation
+-- ░▀█▀░█▀█░█▀▄░█▀▀░█▀█░▀█▀░█▀█░▀█▀░▀█▀░█▀█░█▀█░░
+-- ░░█░░█░█░█░█░█▀▀░█░█░░█░░█▀█░░█░░░█░░█░█░█░█░░
+-- ░▀▀▀░▀░▀░▀▀░░▀▀▀░▀░▀░░▀░░▀░▀░░▀░░▀▀▀░▀▀▀░▀░▀░░
 vim.keymap.set("i", '<D-]>', '<ESC>>>i', { noremap = true, silent = true, desc = "Indent Right" }) -- Indent Right insert mode
 vim.keymap.set("i", '<D-[>', '<ESC><<i', { noremap = true, silent = true, desc = "Indent Left" })  -- Indent Left insert mode
 vim.keymap.set("n", '<D-]>', '>>', { noremap = true, silent = true, desc = "Indent Right" })       -- Indent Right normal mode
