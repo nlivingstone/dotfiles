@@ -715,5 +715,32 @@ vim.api.nvim_create_user_command('Finder',
 )
 
 
+-- Helper function to get operating system
+-- Source: https://gist.github.com/Zbizu/43df621b3cd0dc460a76f7fe5aa87f30
+vim.api.nvim_create_user_command('GetOS',
+  function()
+    function GetOS()
+      local osname
+      -- ask LuaJIT first
+      if jit then
+        return jit.os
+      end
+
+      -- Unix, Linux variants
+      local fh, err = assert(io.popen("uname -o 2>/dev/null", "r"))
+      if fh then
+        osname = fh:read()
+      end
+
+      return osname or "Windows"
+    end
+
+    -- return GetOS()
+    vim.print(GetOS());
+  end,
+  {}
+)
+
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
