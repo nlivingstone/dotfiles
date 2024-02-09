@@ -124,10 +124,16 @@ require('lazy').setup({
     },
     config = function()
       require("ibl").setup({
-        indent = { highlight = highlight, char = "" },
+        indent = {
+          highlight = {
+            "CodeBlock",
+            "Whitespace",
+          },
+          char = ""
+        },
         whitespace = {
           highlight = {
-            "CursorColumn",
+            "CodeBlock",
             "Whitespace",
           },
           remove_blankline_trail = false,
