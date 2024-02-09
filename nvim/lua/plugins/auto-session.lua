@@ -8,6 +8,7 @@ return {
     require("auto-session").setup {
       log_level = "error",
       auto_session_enable_last_session = vim.loop.cwd() == "/",
+      auto_session_last_session_dir = '',
       auto_session_root_dir = vim.fn.stdpath('data') .. "/sessions/",
       auto_session_enabled = true,
       auto_restore_enabled = true,
@@ -21,4 +22,3 @@ return {
     }
   end
 }
-
