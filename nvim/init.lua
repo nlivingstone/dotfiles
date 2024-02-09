@@ -15,6 +15,8 @@ vim.g.maplocalleader = ' '
 vim.o.guifont = "CartographCF Nerd Font:h13"
 
 
+
+
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -206,6 +208,9 @@ require('lazy').setup({
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   { import = 'plugins' },
 }, {})
+
+
+
 
 -- ░█▀▀░█▀▀░▀█▀░▀█▀░▀█▀░█▀█░█▀▀░░░█▀█░█▀█░▀█▀░▀█▀░█▀█░█▀█░█▀▀░
 -- ░▀▀█░█▀▀░░█░░░█░░░█░░█░█░█░█░░░█░█░█▀▀░░█░░░█░░█░█░█░█░▀▀█░
@@ -702,7 +707,7 @@ vim.api.nvim_create_user_command('Finder',
 )
 
 
--- Helper function to get operating system
+-- Print name of operating system
 -- Source: https://gist.github.com/Zbizu/43df621b3cd0dc460a76f7fe5aa87f30
 vim.api.nvim_create_user_command('GetOS',
   function()
