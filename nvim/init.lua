@@ -649,7 +649,7 @@ if vim.g.neovide then
   -- ░█░█░█▀▀░█░█░▀▄▀░░█░░█░█░█▀▀░░░█▀▄░█▀▀░░█░░█▀▄░░█░░█░█░█░█░░█░░█░█░█░█░▀▀█
   -- ░▀░▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀▀░░▀▀▀░░░▀░▀░▀▀▀░░▀░░▀▀░░▀▀▀░▀░▀░▀▀░░▀▀▀░▀░▀░▀▀▀░▀▀▀
   vim.keymap.set("n", "<D-w>", ":bd<CR>")         -- CMD + W: Quit current tab normal mode
-  vim.keymap.set("i", "<D-w>", "<C-o>:bd<CR>")    -- CMD + W: Quit current tab insert mode
+  vim.keymap.set("i", "<D-w>", "<ESC>:bd<CR>")    -- CMD + W: Quit current tab insert mode
   vim.keymap.set({ "n", "v" }, '<D-s>', ':w<CR>') -- CMD + S: Save normal + visual mode
   vim.keymap.set('i', '<D-s>', '<C-o>:w<CR>')     -- CMD + S: Save insert mode
   vim.keymap.set('v', '<D-c>', '"+y')             -- CMD + C: Copy in visual mode
