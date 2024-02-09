@@ -703,5 +703,17 @@ vim.keymap.set("n", '<D-[>', '<<', { noremap = true, silent = true, desc = "Inde
 vim.keymap.set("v", '<D-]>', '>gv', { noremap = true, silent = true, desc = "Indent Right" })      -- Indent Right visual mode
 vim.keymap.set("v", '<D-[>', '<gv', { noremap = true, silent = true, desc = "Outdent Left" })      -- Indent Left visual mode
 
+
+-- Open current dir in finder
+-- Source: https://dx13.co.uk/articles/2023/04/08/neovim-reveal-in-finder/
+vim.api.nvim_create_user_command('Finder',
+  function()
+    local path = vim.api.nvim_buf_get_name(0)
+    os.execute('open -R ' .. path)
+  end,
+  {}
+)
+
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
