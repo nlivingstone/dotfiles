@@ -3,3 +3,7 @@
 # ░▀░▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀▀░░▀▀▀░░░▀▀▀░▀▀▀░▀░▀░▀░░░▀▀▀░▀▀▀░
 
 frame = "transparent"
+
+[font]
+normal = ["CartographCF Nerd Font"]
+size = 12

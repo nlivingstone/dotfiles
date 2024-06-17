@@ -12,11 +12,11 @@ return {
             terminal_mappings = true,
             close_on_exit = true,
             auto_scroll = true,
-            shade_terminals = false,
-            shading_factor = false,
-            direction = 'float',   -- 'vertical', 'horizontal', 'tab', 'float'
+            start_in_insert = true,
+            shade_terminals = true,
+            direction = 'horizontal', -- 'vertical', 'horizontal', 'tab', 'float'
             float_opts = {
-                border = 'curved', -- 'single', 'double', 'shadow', 'curved'
+                border = 'curved',    -- 'single', 'double', 'shadow', 'curved'
                 winblend = 0,
                 title_pos = 'center',
             },

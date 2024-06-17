@@ -1,4 +1,3 @@
 return {
     -- disable trouble
-    'tokyodark'
-  }
+}

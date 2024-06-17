@@ -10,7 +10,7 @@ return {
     require("workspaces").setup({
       cd_type = "global",
       hooks = {
-        open = "Telescope file_browser",
+        open = "Neotree",
       }
     })
   end

@@ -14,9 +14,6 @@ vim.g.maplocalleader = ' '
 
 vim.o.guifont = "CartographCF Nerd Font:h13"
 
-
-
-
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -620,7 +617,7 @@ if vim.g.neovide then
   -- ░█▀▀░█░░░█▀█░█▀█░▀█▀░▀█▀░█▀█░█▀▀░░░█▀▀░█░█░█▀█░█▀▄░█▀█░█░█░
   -- ░█▀▀░█░░░█░█░█▀█░░█░░░█░░█░█░█░█░░░▀▀█░█▀█░█▀█░█░█░█░█░█▄█░
   -- ░▀░░░▀▀▀░▀▀▀░▀░▀░░▀░░▀▀▀░▀░▀░▀▀▀░░░▀▀▀░▀░▀░▀░▀░▀▀░░▀▀▀░▀░▀░
-  vim.g.neovide_floating_shadow = false
+  vim.g.neovide_floating_shadow = true
   vim.g.neovide_floating_z_height = 10
   vim.g.neovide_light_angle_degrees = 45
   vim.g.neovide_light_radius = 20
@@ -628,10 +625,11 @@ if vim.g.neovide then
   -- ░█▀█░█▀█░█▀▄░█▀▄░▀█▀░█▀█░█▀▀░
   -- ░█▀▀░█▀█░█░█░█░█░░█░░█░█░█░█░
   -- ░▀░░░▀░▀░▀▀░░▀▀░░▀▀▀░▀░▀░▀▀▀░
-  vim.g.neovide_padding_top = 5
-  vim.g.neovide_padding_bottom = 5
+  vim.g.neovide_padding_top = 0
+  vim.g.neovide_padding_bottom = 0
   vim.g.neovide_padding_right = 5
   vim.g.neovide_padding_left = 5
+  vim.g.neovide_show_border = true
 
   -- ░█▀▀░█░█░█▀▄░█▀▀░█▀█░█▀▄░░░█▀█░█▀█░▀█▀░█▄█░█▀█░▀█▀░▀█▀░█▀█░█▀█░
   -- ░█░░░█░█░█▀▄░▀▀█░█░█░█▀▄░░░█▀█░█░█░░█░░█░█░█▀█░░█░░░█░░█░█░█░█░
@@ -706,6 +704,10 @@ vim.keymap.set("v", '<D-]>', '>gv', { noremap = true, silent = true, desc = "Ind
 vim.keymap.set("v", '<D-[>', '<gv', { noremap = true, silent = true, desc = "Outdent Left" })      -- Indent Left visual mode
 
 
+vim.keymap.set('n', '<D-b>', function() vim.cmd('Neotree toggle') end)
+vim.keymap.set('n', '<D-S-b>', function() vim.cmd('Neotree focus') end)
+
+
 -- Open current dir in finder
 -- Source: https://dx13.co.uk/articles/2023/04/08/neovim-reveal-in-finder/
 vim.api.nvim_create_user_command('Finder',
@@ -744,6 +746,8 @@ vim.api.nvim_create_user_command('GetOS',
 )
 
 vim.api.nvim_set_hl(0, 'Comment', { italic = false, fg = '#545c7e' })
+
+--  TODO: Something somthing to be done
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
