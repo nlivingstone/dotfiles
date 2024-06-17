@@ -13,7 +13,6 @@ return {
             horizontal = 'left',
             vertical = 'bottom',
             timeout = 2000,
-            show_all = true,
         })
     end
 }
