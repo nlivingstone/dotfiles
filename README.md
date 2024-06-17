@@ -11,6 +11,8 @@
 * 🌈 [TokyoNight](https://github.com/folke/tokyonight.nvim) 
 * ✍️  [Neovim](https://neovim.io/) with [Neovide](https://neovide.dev/)
 * 🐚 [Oh My ZSH!](https://ohmyz.sh/) with [Starship Prompt](https://starship.rs/)
+* ☎️  [iTerm2](https://iterm2.com/)
+
 
 
 ## Install
