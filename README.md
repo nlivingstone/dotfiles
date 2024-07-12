@@ -25,3 +25,21 @@ ln -s starship.toml ~/.config/starship.toml
 ln -s zsh/.zshrc ~/.zshrc
 ```
 
+## Neovim Keybinds
+
+
+## Navigation
+
+| Keybind     | Description             |
+| ----------- | ----------------------- |
+| CMD + RIGHT | Move to next buffer     |
+| CMD + LEFT  | Move to previous buffer |
+
+## Laravel + PHP
+
+| Keybind      | Description             |
+| ------------ | ----------------------- |
+| `<leader>la` | Run artisan command     |
+| `<leader>lr` | List application routes |
+| `<leader>su` | Sort use statements     |
+
