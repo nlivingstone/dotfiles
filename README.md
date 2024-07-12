@@ -32,8 +32,8 @@ ln -s zsh/.zshrc ~/.zshrc
 
 | Keybind     | Description             |
 | ----------- | ----------------------- |
-| `CMD` + `RIGHT` | Move to next buffer     |
-| `CMD` + `LEFT`  | Move to previous buffer |
+| `CMD` `RIGHT` | Move to next buffer     |
+| `CMD` `LEFT`  | Move to previous buffer |
 
 ## Laravel + PHP
 
