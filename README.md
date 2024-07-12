@@ -50,7 +50,7 @@ ln -s zsh/.zshrc ~/.zshrc
 
 | Keybind      | Description             |
 | ------------ | ----------------------- |
-| `<leader>la` | Run artisan command     |
+| <kbd><leader>la</kbd> | Run artisan command     |
 | `<leader>lr` | List application routes |
 | `<leader>su` | Sort use statements     |
 
