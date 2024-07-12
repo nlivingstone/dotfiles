@@ -27,6 +27,11 @@ ln -s zsh/.zshrc ~/.zshrc
 
 ## Neovim
 
+### Plugins
+- [auto-session](https://github.com/rmagatti/auto-session): Automatic session managementA
+- [BufferTabs](https://github.com/tomiis4/BufferTabs.nvim): Floating tabline
+- [Conform](https://github.com/stevearc/conform.nvim): Formatter 
+
 ### Keybinds
 
 #### Navigation
