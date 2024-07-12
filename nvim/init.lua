@@ -361,7 +361,7 @@ vim.keymap.set("n", "<leader>ss", require("auto-session.session-lens").search_se
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'markdown', 'php', 'go', 'lua', 'rust', 'javascript', 'vimdoc', 'vim', 'html', 'vue', 'css' },
+  ensure_installed = { 'markdown', 'php', 'go', 'lua', 'javascript', 'html', 'vue', 'css' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = true,
@@ -487,6 +487,9 @@ end
 --
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
+--
+
+
 local servers = {
   phpactor = {
     filetypes = { 'php' }
@@ -495,11 +498,12 @@ local servers = {
     filetypes = { 'javascript', 'vue', 'json' },
   },
   tailwindcss = {
-    filetypes = { "aspnetcorerazor", "astro", "astro-markdown", "blade", "clojure", "django-html", "htmldjango", "edge", "eelixir", "elixir", "ejs", "erb", "eruby", "gohtml", "gohtmltmpl", "haml", "handlebars", "hbs", "html", "html-eex", "heex", "jade", "leaf", "liquid", "markdown", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig", "css", "less", "postcss", "sass", "scss", "stylus", "sugarss", "javascript", "javascriptreact", "reason", "rescript", "typescript", "typescriptreact", "vue", "svelte" }
+    filetypes = { "blade", "html", "php" }
   },
-  emmet_ls = {
-    filetypes = { 'php', 'html', 'vue' }
+  emmet_language_server = {
+    filetypes = { 'php', 'html', 'vue', 'blade' },
   },
+
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
