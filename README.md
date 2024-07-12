@@ -29,8 +29,11 @@ ln -s zsh/.zshrc ~/.zshrc
 
 ### Plugins
 - [auto-session](https://github.com/rmagatti/auto-session): Automatic session managementA
-- [BufferTabs](https://github.com/tomiis4/BufferTabs.nvim): Floating tabline
-- [Conform](https://github.com/stevearc/conform.nvim): Formatter 
+- [buffertabs.nvim](https://github.com/tomiis4/BufferTabs.nvim): Floating tabline
+- [conform.nvim](https://github.com/stevearc/conform.nvim): Automatic document formatting
+- [laravel.nvim](https://github.com/adalessa/laravel.nvim): Enhanced development experience of Laravel projects 
+- [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim): Sidebar file browser
+
 
 ### Keybinds
 
