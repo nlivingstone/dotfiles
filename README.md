@@ -25,10 +25,11 @@ ln -s starship.toml ~/.config/starship.toml
 ln -s zsh/.zshrc ~/.zshrc
 ```
 
-## Neovim Keybinds
+## Neovim
 
+### Keybinds
 
-## Navigation
+#### Navigation
 
 | Keybind                 | Description                       |
 | ----------------------- | --------------------------------- |
@@ -37,7 +38,7 @@ ln -s zsh/.zshrc ~/.zshrc
 | `CMD` + `b`             | Open Neotree                      |
 | `CMD` + `SHIFT` + `b`   | Focus Neotree                     |
 
-## Laravel + PHP
+#### Laravel + PHP
 
 | Keybind      | Description             |
 | ------------ | ----------------------- |
