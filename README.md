@@ -41,10 +41,11 @@ ln -s zsh/.zshrc ~/.zshrc
 
 | Keybind                                        | Description                       |
 | ---------------------------------------------- | --------------------------------- |
-| <kbd>CMD</kbd> <kbd>RIGHT</kbd>                | Move to next buffer               |
-| <kbd>CMD</kbd> <kbd>LEFT</kbd>                 | Move to previous buffer           |
+| <kbd>CMD</kbd> <kbd>&rightarrow;</kbd>                | Move to next buffer               |
+| <kbd>CMD</kbd> <kbd>&leftarrow;</kbd>                 | Move to previous buffer           |
 | <kbd>CMD</kbd> <kbd>b</kbd>                    | Open Neotree                      |
 | <kbd>CMD</kbd> <kbd>SHIFT</kbd> <kbd>b</kbd>   | Focus Neotree                     |
+
 
 #### Laravel + PHP
 
