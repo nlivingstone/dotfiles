@@ -48,9 +48,9 @@ ln -s zsh/.zshrc ~/.zshrc
 
 #### Laravel + PHP
 
-| Keybind      | Description             |
-| ------------ | ----------------------- |
-| <kbd><leader>la</kbd> | Run artisan command     |
-| `<leader>lr` | List application routes |
-| `<leader>su` | Sort use statements     |
+| Keybind                               | Description             |
+| ------------------------------------- | ----------------------- |
+| <kbd>LEADER</kbd> <kbd>la</kbd>       | Run artisan command     |
+| <kbd>LEADER</kbd> <kbd>lr</kbd>       | List application routes |
+| <kbd>LEADER</kbd> <kbd>su</kbd>       | Sort use statements     |
 
