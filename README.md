@@ -37,6 +37,8 @@ ln -s zsh/.zshrc ~/.zshrc
 
 ### Keybinds
 
+Leader = <kbd>SPACE</kbd>
+
 #### Navigation
 
 | Keybind                                        | Description                       |
