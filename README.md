@@ -41,7 +41,7 @@ ln -s zsh/.zshrc ~/.zshrc
 
 | Keybind                 | Description                       |
 | ----------------------- | --------------------------------- |
-| `CMD` + `RIGHT`         | Move to next buffer               |
+| <kbd>CMD</kbd> + <kbd>RIGHT</kbd>         | Move to next buffer               |
 | `CMD` + `LEFT`          | Move to previous buffer           |
 | `CMD` + `b`             | Open Neotree                      |
 | `CMD` + `SHIFT` + `b`   | Focus Neotree                     |
