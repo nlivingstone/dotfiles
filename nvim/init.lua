@@ -648,34 +648,23 @@ if vim.g.neovide then
   vim.g.neovide_cursor_animation_length = 0.05
   vim.g.neovide_cursor_animate_in_insert_mode = true
   vim.g.neovide_cursor_animate_command_line = true
-
-  -- ░█▀█░█▀▀░█▀█░█░█░▀█▀░█▀▄░█▀▀░░░█░█░█▀▀░█░█░█▀▄░▀█▀░█▀█░█▀▄░▀█▀░█▀█░█▀▀░█▀▀
-  -- ░█░█░█▀▀░█░█░▀▄▀░░█░░█░█░█▀▀░░░█▀▄░█▀▀░░█░░█▀▄░░█░░█░█░█░█░░█░░█░█░█░█░▀▀█
-  -- ░▀░▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀▀░░▀▀▀░░░▀░▀░▀▀▀░░▀░░▀▀░░▀▀▀░▀░▀░▀▀░░▀▀▀░▀░▀░▀▀▀░▀▀▀
-  vim.keymap.set("n", "<D-w>", ":bd<CR>")         -- CMD + W: Quit current tab normal mode
-  vim.keymap.set("i", "<D-w>", "<ESC>:bd<CR>")    -- CMD + W: Quit current tab insert mode
-  vim.keymap.set({ "n", "v" }, '<D-s>', ':w<CR>') -- CMD + S: Save normal + visual mode
-  vim.keymap.set('i', '<D-s>', '<C-o>:w<CR>')     -- CMD + S: Save insert mode
-  vim.keymap.set('v', '<D-c>', '"+y')             -- CMD + C: Copy in visual mode
-  vim.keymap.set('v', '<D-x>', 'x')               -- CMD + X: Cut in visual mode
-  vim.keymap.set("n", '<D-x>', 'dd')              -- CMD + X: Cut in normal mode
-  vim.keymap.set("i", '<D-x>', '<C-o>dd')         -- CMD + X: Cut insert mode
-  vim.keymap.set({ "n", "v" }, '<D-v>', '"+P')    -- CMD + V: Paste normal + visual mode
-  vim.keymap.set('!', '<D-v>', '<C-r><C-r>+')     -- CMD + V: Paste command mode
-  vim.keymap.set('i', '<D-v>', '<C-o>"+P')        -- CMD + V: Paste insert mode
-
-  -- ░█▀▀░█▀▀░█░░░█▀▀░█▀▀░▀█▀░▀█▀░█▀█░█▀█░
-  -- ░▀▀█░█▀▀░█░░░█▀▀░█░░░░█░░░█░░█░█░█░█░
-  -- ░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀▀▀░▀░▀░
-  vim.keymap.set({ 'i', 'n' }, '<S-Left>', 'v<Left>')   -- Shift+Left Select in the corresponding direction.
-  vim.keymap.set({ 'i', 'n' }, '<S-Right>', 'v<Right>') -- Shift+Right Select in the corresponding direction.
-  vim.keymap.set({ 'i', 'n' }, '<S-Up>', 'v<Up>')       -- Shift+Up Select in the corresponding direction.
-  vim.keymap.set({ 'i', 'n' }, '<S-Down>', 'v<Down>')   -- Shift+Down Select in the corresponding direction.
-  vim.keymap.set('v', '<S-Left>', '<Left>')             -- Shift+Left Select in the corresponding direction.
-  vim.keymap.set('v', '<S-Right>', '<Right>')           -- Shift+Right Select in the corresponding direction.
-  vim.keymap.set('v', '<S-Up>', '<Up>')                 -- Shift+Up Select in the corresponding direction.
-  vim.keymap.set('v', '<S-Down>', '<Down>')             -- Shift+Down Select in the corresponding direction.
 end
+
+
+-- ░█▀█░█▀▀░█▀█░█░█░▀█▀░█▀▄░█▀▀░░░█░█░█▀▀░█░█░█▀▄░▀█▀░█▀█░█▀▄░▀█▀░█▀█░█▀▀░█▀▀
+-- ░█░█░█▀▀░█░█░▀▄▀░░█░░█░█░█▀▀░░░█▀▄░█▀▀░░█░░█▀▄░░█░░█░█░█░█░░█░░█░█░█░█░▀▀█
+-- ░▀░▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀▀░░▀▀▀░░░▀░▀░▀▀▀░░▀░░▀▀░░▀▀▀░▀░▀░▀▀░░▀▀▀░▀░▀░▀▀▀░▀▀▀
+vim.keymap.set("n", "<D-w>", ":bd<CR>")         -- CMD + W: Quit current tab normal mode
+vim.keymap.set("i", "<D-w>", "<ESC>:bd<CR>")    -- CMD + W: Quit current tab insert mode
+vim.keymap.set({ "n", "v" }, '<D-s>', ':w<CR>') -- CMD + S: Save normal + visual mode
+vim.keymap.set('i', '<D-s>', '<C-o>:w<CR>')     -- CMD + S: Save insert mode
+vim.keymap.set('v', '<D-c>', '"+y')             -- CMD + C: Copy in visual mode
+vim.keymap.set('v', '<D-x>', 'x')               -- CMD + X: Cut in visual mode
+vim.keymap.set("n", '<D-x>', 'dd')              -- CMD + X: Cut in normal mode
+vim.keymap.set("i", '<D-x>', '<C-o>dd')         -- CMD + X: Cut insert mode
+vim.keymap.set({ "n", "v" }, '<D-v>', '"+P')    -- CMD + V: Paste normal + visual mode
+vim.keymap.set('!', '<D-v>', '<C-r><C-r>+')     -- CMD + V: Paste command mode
+vim.keymap.set('i', '<D-v>', '<C-o>"+P')        -- CMD + V: Paste insert mode
 
 -- Allow clipboard copy paste in neovim
 -- vim.api.nvim_set_keymap('', '<D-v>', '+p<CR>', { noremap = true, silent = true })
@@ -683,6 +672,19 @@ end
 -- vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('!', '<D-v>', '<C-R><C-O>+', { noremap = true, silent = true })
+
+
+-- ░█▀▀░█▀▀░█░░░█▀▀░█▀▀░▀█▀░▀█▀░█▀█░█▀█░
+-- ░▀▀█░█▀▀░█░░░█▀▀░█░░░░█░░░█░░█░█░█░█░
+-- ░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀▀▀░▀░▀░
+vim.keymap.set({ 'i', 'n' }, '<S-Left>', 'v<Left>')   -- SHIFT + LEFT: Select in the corresponding direction.
+vim.keymap.set({ 'i', 'n' }, '<S-Right>', 'v<Right>') -- SHIFT + RIGHT: Select in the corresponding direction.
+vim.keymap.set({ 'i', 'n' }, '<S-Up>', 'v<Up>')       -- SHIFT + UP: Select in the corresponding direction.
+vim.keymap.set({ 'i', 'n' }, '<S-Down>', 'v<Down>')   -- SHIFT + DOWN: Select in the corresponding direction.
+vim.keymap.set('v', '<S-Left>', '<Left>')             -- SHIFT + LEFT:  Select in the corresponding direction.
+vim.keymap.set('v', '<S-Right>', '<Right>')           -- SHIFT + RIGHT: Select in the corresponding direction.
+vim.keymap.set('v', '<S-Up>', '<Up>')                 -- SHIFT + UP: Select in the corresponding direction.
+vim.keymap.set('v', '<S-Down>', '<Down>')             -- SHIFT + DOWN: Select in the corresponding direction.
 
 -- ░█▀█░█▀█░█░█░▀█▀░█▀▀░█▀█░▀█▀░█▀▀░░░█▀▄░█░█░█▀▀░█▀▀░█▀▀░█▀▄░█▀▀░
 -- ░█░█░█▀█░▀▄▀░░█░░█░█░█▀█░░█░░█▀▀░░░█▀▄░█░█░█▀▀░█▀▀░█▀▀░█▀▄░▀▀█░
@@ -700,16 +702,16 @@ vim.keymap.set({ 'v', 'n' }, 'd', '"_d', { noremap = true, silent = true })
 -- ░▀█▀░█▀█░█▀▄░█▀▀░█▀█░▀█▀░█▀█░▀█▀░▀█▀░█▀█░█▀█░
 -- ░░█░░█░█░█░█░█▀▀░█░█░░█░░█▀█░░█░░░█░░█░█░█░█░
 -- ░▀▀▀░▀░▀░▀▀░░▀▀▀░▀░▀░░▀░░▀░▀░░▀░░▀▀▀░▀▀▀░▀░▀░
-vim.keymap.set("i", '<D-]>', '<ESC>>>i', { noremap = true, silent = true, desc = "Indent Right" }) -- Indent Right insert mode
-vim.keymap.set("i", '<D-[>', '<ESC><<i', { noremap = true, silent = true, desc = "Indent Left" })  -- Indent Left insert mode
-vim.keymap.set("n", '<D-]>', '>>', { noremap = true, silent = true, desc = "Indent Right" })       -- Indent Right normal mode
-vim.keymap.set("n", '<D-[>', '<<', { noremap = true, silent = true, desc = "Indent Left" })        -- Indent Right normal mode
-vim.keymap.set("v", '<D-]>', '>gv', { noremap = true, silent = true, desc = "Indent Right" })      -- Indent Right visual mode
-vim.keymap.set("v", '<D-[>', '<gv', { noremap = true, silent = true, desc = "Outdent Left" })      -- Indent Left visual mode
+vim.keymap.set("i", '<D-]>', '<ESC>>>i', { noremap = true, silent = true, desc = "Indent Right" }) -- CMD + ]:  Indent Right insert mode
+vim.keymap.set("i", '<D-[>', '<ESC><<i', { noremap = true, silent = true, desc = "Indent Left" })  -- CMD + [: Indent Left insert mode
+vim.keymap.set("n", '<D-]>', '>>', { noremap = true, silent = true, desc = "Indent Right" })       -- CMD + ]: Indent Right normal mode
+vim.keymap.set("n", '<D-[>', '<<', { noremap = true, silent = true, desc = "Indent Left" })        -- CMD + [: Indent Right normal mode
+vim.keymap.set("v", '<D-]>', '>gv', { noremap = true, silent = true, desc = "Indent Right" })      -- CMD + ]: Indent Right visual mode
+vim.keymap.set("v", '<D-[>', '<gv', { noremap = true, silent = true, desc = "Outdent Left" })      -- CMD + [: Indent Left visual mode
 
 
-vim.keymap.set('n', '<D-b>', function() vim.cmd('Neotree toggle') end)
-vim.keymap.set('n', '<D-S-b>', function() vim.cmd('Neotree focus') end)
+vim.keymap.set({ 'n', 'i', 'v' }, '<D-b>', function() vim.cmd('Neotree toggle') end)  -- CMD + b: Toggle Neotree
+vim.keymap.set({ 'n', 'i', 'v' }, '<D-S-b>', function() vim.cmd('Neotree focus') end) -- CMD + SHIFT + b: Focus Neotree
 
 
 -- Open current dir in finder
@@ -751,7 +753,6 @@ vim.api.nvim_create_user_command('GetOS',
 
 vim.api.nvim_set_hl(0, 'Comment', { italic = false, fg = '#545c7e' })
 
---  TODO: Something somthing to be done
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
